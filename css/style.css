@@ -1,14 +1,27 @@
 header {
   background-color: #373A3C; }
-  header .navbar-light .navbar-nav .nav-link {
+  header .navbar-light .navbar-nav .nav-item .nav-link {
     color: rgba(255, 255, 255, 0.5);
     font-size: 16px;
     line-height: 16px;
-    font-family: "Helvetica Neue", sans-serif; }
-    header .navbar-light .navbar-nav .nav-link:hover {
+    font-family: "Helvetica Neue", sans-serif;
+    margin-right: 10px; }
+    header .navbar-light .navbar-nav .nav-item .nav-link:hover {
       color: #FFFFFF; }
-    header .navbar-light .navbar-nav .nav-link .dropdown-toggle::after {
-      color: #8DD83D; }
+
+.user_1 {
+  position: relative;
+  margin-left: 23px; }
+
+.user:before {
+  content: url("../images/user.svg");
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  margin-left: 10px;
+  position: absolute;
+  top: 3px;
+  left: -25px; }
 
 .btn {
   display: inline-block;
@@ -52,23 +65,25 @@ header {
     border: 1px solid #8DD83D;
     box-sizing: border-box;
     border-radius: 4px; }
-    .best_value .item .text_value {
+    .best_value .item .card_text {
       padding: 22px 21px 27px; }
-      .best_value .item .text_value h4 {
+      .best_value .item .card_text h4 {
         font-size: 18px;
         line-height: 21px;
         font-family: "Helvetica Neue", sans-serif;
         color: #435766;
         text-align: left;
         margin-bottom: 13px; }
-      .best_value .item .text_value p {
+      .best_value .item .card_text p {
         font-size: 24px;
         line-height: 28px;
         font-family: "Helvetica Neue", sans-serif;
         color: #435766;
-        margin-bottom: 38px; }
-      .best_value .item .text_value .btn {
-        padding: 19px 23px;
+        margin-bottom: 38px;
+        text-align: left;
+        max-width: 258px; }
+      .best_value .item .card_text .btn {
+        padding: 19px 20px 20px;
         color: #FFFFFF;
         background-color: #8DD83D;
         border-radius: 4px;
@@ -77,14 +92,11 @@ header {
         font-family: "Helvetica Neue", sans-serif;
         max-width: 278px;
         width: 100%;
-        display: inline-block; }
-    .best_value .item .value_img {
+        display: inline-block;
+        box-sizing: border-box; }
+    .best_value .item img {
       display: block;
-      background-image: url("../images/mixer.jpg");
-      max-height: 180px; }
-      .best_value .item .value_img .value_img img {
-        text-align: center;
-        display: block; }
+      width: 100%; }
 
 /*SECTION DESIGN_LAB*/
 .design_lab {
