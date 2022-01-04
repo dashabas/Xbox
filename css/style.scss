@@ -69,22 +69,23 @@ header {
 
 /*CAROUSEL_ONE*/
 
-.carousel {
-  .owl-carousel {
-    display: block;
+.slide-one {
     .item_1{
       background-image: url("../images/Star-Wars-Battlefront-II-combat.jpg");
       background-position: center top;
       background-size: cover;
       height: 100vh;
       padding-top: 206px;
+      padding-left: 680px;
+      @include max-screen(992px) {
+        padding-left: 30px;
+        padding-top: 109px;
+      }
       h3{
         font-size: 36px;
         line-height: 42px;
         color: $white_col;
         font-family: $main_font;
-        margin-left: 660px;
-
       }
       h4{
         font-size: 24px;
@@ -92,28 +93,84 @@ header {
         color: $white_col;
         font-family: $main_font;
         margin-bottom: 134px;
-        margin-left: 660px;
-
       }
       .d-flex{
-        margin-left: 660px;
+        @include max-screen(576px) {
+          flex-direction: column;
+        }
         .btn {
+          font-size: 16px;
+          line-height: 21px;
+          max-width: 148px;
+          width: 100%;
           &:first-of-type{
-            padding: 8px 22px;
             margin-right: 13px;
+            padding: 8px 22px;
+            @include max-screen(576px) {
+              margin-right: 0;
+              margin-bottom: 15px;
+            }
           }
           &:last-of-type{
             background: $back_btn;
-            padding: 8px 18px;
+            padding: 8px 15px;
           }
         }
       }
     }
     .item_2{
       background-image: url("../images/CoD-WWII.jpg");
+      background-position: center top;
+      background-size: cover;
+      height: 100vh;
+      padding-top: 109px;
+      padding-left: 680px;
+      @include max-screen(992px) {
+        padding-left: 30px;
+      }
+
+      h3 {
+        font-size: 36px;
+        line-height: 42px;
+        color: $white_col;
+        font-family: $main_font;
+      }
+      h4{
+        font-size: 24px;
+        line-height: 28px;
+        color: $white_col;
+        font-family: $main_font;
+        margin-bottom: 139px;
+      }
+      .d-flex{
+        @include max-screen(576px) {
+          flex-direction: column;
+        }
+        .btn{
+          font-size: 16px;
+          line-height: 21px;
+          max-width: 148px;
+          width: 100%;
+          &:first-of-type{
+            margin-right: 13px;
+            padding: 8px 29px;
+            @include max-screen(576px) {
+              margin-right: 0;
+              margin-bottom: 15px;
+            }
+          }
+          &:last-of-type{
+            padding: 8px 25px;
+          }
+        }
+
+      }
     }
+  .owl-dots{
+    display: none;
   }
 }
+
 
 
 /*SECTION BEST_VALUE*/
@@ -142,8 +199,6 @@ header {
     @include max-screen(768px) {
       flex-direction: column;
       align-items: center;
-
-
     }
   }
   .item {
@@ -220,6 +275,15 @@ header {
     height: 100%;
     z-index: 1;
   }
+  h2{
+    font-size: 36px;
+    line-height: 42px;
+    font-family: $main_font;
+    color: $white_col;
+    z-index: 2;
+  }
+
+
 
 }
 
@@ -294,7 +358,7 @@ header {
 
 
 
-
+/*FOOTER*/
 
 footer {
   background-color: #373A3C;
@@ -367,6 +431,10 @@ footer {
       color: $white_col;
       font-size: 16px;
       line-height: 19px;
+      @include max-screen(576px) {
+        font-size: 10px;
+        line-height: 12px;
+      }
     }
   }
 }

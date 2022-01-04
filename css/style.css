@@ -36,37 +36,86 @@ header {
     color: #FFFFFF; }
 
 /*CAROUSEL_ONE*/
-.carousel .owl-carousel {
-  display: block; }
-  .carousel .owl-carousel .item_1 {
-    background-image: url("../images/Star-Wars-Battlefront-II-combat.jpg");
-    background-position: center top;
-    background-size: cover;
-    height: 100vh;
-    padding-top: 206px; }
-    .carousel .owl-carousel .item_1 h3 {
-      font-size: 36px;
-      line-height: 42px;
-      color: #FFFFFF;
-      font-family: "Helvetica Neue", sans-serif;
-      margin-left: 660px; }
-    .carousel .owl-carousel .item_1 h4 {
-      font-size: 24px;
-      line-height: 28px;
-      color: #FFFFFF;
-      font-family: "Helvetica Neue", sans-serif;
-      margin-bottom: 134px;
-      margin-left: 660px; }
-    .carousel .owl-carousel .item_1 .d-flex {
-      margin-left: 660px; }
-      .carousel .owl-carousel .item_1 .d-flex .btn:first-of-type {
-        padding: 8px 22px;
-        margin-right: 13px; }
-      .carousel .owl-carousel .item_1 .d-flex .btn:last-of-type {
-        background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
-        padding: 8px 18px; }
-  .carousel .owl-carousel .item_2 {
-    background-image: url("../images/CoD-WWII.jpg"); }
+.slide-one .item_1 {
+  background-image: url("../images/Star-Wars-Battlefront-II-combat.jpg");
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 206px;
+  padding-left: 680px; }
+  @media screen and (max-width: 992px) {
+    .slide-one .item_1 {
+      padding-left: 30px;
+      padding-top: 109px; } }
+  .slide-one .item_1 h3 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", sans-serif; }
+  .slide-one .item_1 h4 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", sans-serif;
+    margin-bottom: 134px; }
+  @media screen and (max-width: 576px) {
+    .slide-one .item_1 .d-flex {
+      flex-direction: column; } }
+  .slide-one .item_1 .d-flex .btn {
+    font-size: 16px;
+    line-height: 21px;
+    max-width: 148px;
+    width: 100%; }
+    .slide-one .item_1 .d-flex .btn:first-of-type {
+      margin-right: 13px;
+      padding: 8px 22px; }
+      @media screen and (max-width: 576px) {
+        .slide-one .item_1 .d-flex .btn:first-of-type {
+          margin-right: 0;
+          margin-bottom: 15px; } }
+    .slide-one .item_1 .d-flex .btn:last-of-type {
+      background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+      padding: 8px 15px; }
+.slide-one .item_2 {
+  background-image: url("../images/CoD-WWII.jpg");
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 109px;
+  padding-left: 680px; }
+  @media screen and (max-width: 992px) {
+    .slide-one .item_2 {
+      padding-left: 30px; } }
+  .slide-one .item_2 h3 {
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", sans-serif; }
+  .slide-one .item_2 h4 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", sans-serif;
+    margin-bottom: 139px; }
+  @media screen and (max-width: 576px) {
+    .slide-one .item_2 .d-flex {
+      flex-direction: column; } }
+  .slide-one .item_2 .d-flex .btn {
+    font-size: 16px;
+    line-height: 21px;
+    max-width: 148px;
+    width: 100%; }
+    .slide-one .item_2 .d-flex .btn:first-of-type {
+      margin-right: 13px;
+      padding: 8px 29px; }
+      @media screen and (max-width: 576px) {
+        .slide-one .item_2 .d-flex .btn:first-of-type {
+          margin-right: 0;
+          margin-bottom: 15px; } }
+    .slide-one .item_2 .d-flex .btn:last-of-type {
+      padding: 8px 25px; }
+.slide-one .owl-dots {
+  display: none; }
 
 /*SECTION BEST_VALUE*/
 .best_value {
@@ -153,6 +202,12 @@ header {
     width: 100%;
     height: 100%;
     z-index: 1; }
+  .games h2 {
+    font-size: 36px;
+    line-height: 42px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #FFFFFF;
+    z-index: 2; }
 
 /*SECTION DESIGN_LAB*/
 .design_lab {
@@ -205,6 +260,7 @@ header {
       .design_lab .btn {
         padding: 20px 10px; } }
 
+/*FOOTER*/
 footer {
   background-color: #373A3C;
   padding-top: 58px;
@@ -259,6 +315,10 @@ footer {
     color: #FFFFFF;
     font-size: 16px;
     line-height: 19px; }
+    @media screen and (max-width: 576px) {
+      footer .row.justify-content-between .footnote {
+        font-size: 10px;
+        line-height: 12px; } }
 
 .call_of_duty_1 {
   background: radial-gradient(100% 100% at 50% 0%, rgba(76, 80, 82, 0.1) 0%, rgba(95, 98, 101, 0.1) 100%);
