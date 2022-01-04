@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $('.slide-two').owlCarousel({
         loop:true,
-        margin:16,
+        margin:10,
         nav:true,
         navText: [ '', ' ' ],
 
@@ -28,9 +28,16 @@ $(document).ready(function(){
                 items:1
             },
 
+            768:{
+                items:2
+            },
 
-            1000:{
-                items:3.75
+            992:{
+                items:3
+            },
+
+            1200:{
+                items:3.85
             }
         }
     });

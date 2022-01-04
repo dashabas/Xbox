@@ -16,22 +16,29 @@ $back_btn: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
 
 header {
   background-color: #373A3C;
-
   .navbar-light{
     .navbar-nav {
       .nav-item {
+        margin-right: 10px;
 
         .nav-link {
           color: rgba(255, 255, 255, 0.5);
           font-size: 16px;
           line-height: 16px;
           font-family: $main_font;
-          margin-right: 10px;
-
+          //margin-right: 10px;
 
           &:hover {
             color: $white_col;
           }
+        }
+        .dropdown-toggle::after{
+          content: "\f078";
+          color: $green_col;
+          border: none;
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+          font-size: 10px;
         }
       }
     }
@@ -50,7 +57,9 @@ header {
   position: absolute;
   top: 3px;
   left: -25px;
-
+  @include max-screen(768px) {
+    left: -35px;
+  }
 }
 
 .btn{
@@ -69,105 +78,145 @@ header {
 
 /*CAROUSEL_ONE*/
 
-.slide-one {
-    .item_1{
-      background-image: url("../images/Star-Wars-Battlefront-II-combat.jpg");
-      background-position: center top;
-      background-size: cover;
-      height: 100vh;
-      padding-top: 206px;
-      padding-left: 680px;
-      @include max-screen(992px) {
-        padding-left: 30px;
-        padding-top: 109px;
-      }
-      h3{
-        font-size: 36px;
-        line-height: 42px;
-        color: $white_col;
-        font-family: $main_font;
-      }
-      h4{
-        font-size: 24px;
-        line-height: 28px;
-        color: $white_col;
-        font-family: $main_font;
-        margin-bottom: 134px;
-      }
-      .d-flex{
-        @include max-screen(576px) {
-          flex-direction: column;
-        }
-        .btn {
-          font-size: 16px;
-          line-height: 21px;
-          max-width: 148px;
-          width: 100%;
-          &:first-of-type{
-            margin-right: 13px;
-            padding: 8px 22px;
-            @include max-screen(576px) {
-              margin-right: 0;
-              margin-bottom: 15px;
-            }
-          }
-          &:last-of-type{
-            background: $back_btn;
-            padding: 8px 15px;
-          }
-        }
-      }
-    }
-    .item_2{
-      background-image: url("../images/CoD-WWII.jpg");
-      background-position: center top;
-      background-size: cover;
-      height: 100vh;
+.owl-carousel.slide-one {
+  .item_1{
+    background-image: url("../images/Star-Wars-Battlefront-II-combat.jpg");
+    background-position: center top;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 206px;
+    padding-left: 680px;
+    @include max-screen(992px) {
+      padding-left: 30px;
       padding-top: 109px;
-      padding-left: 680px;
-      @include max-screen(992px) {
-        padding-left: 30px;
+    }
+    h3{
+      font-size: 36px;
+      line-height: 42px;
+      color: $white_col;
+      font-family: $main_font;
+    }
+    h4{
+      font-size: 24px;
+      line-height: 28px;
+      color: $white_col;
+      font-family: $main_font;
+      margin-bottom: 134px;
+    }
+    .d-flex{
+      @include max-screen(576px) {
+        flex-direction: column;
       }
-
-      h3 {
-        font-size: 36px;
-        line-height: 42px;
-        color: $white_col;
-        font-family: $main_font;
-      }
-      h4{
-        font-size: 24px;
-        line-height: 28px;
-        color: $white_col;
-        font-family: $main_font;
-        margin-bottom: 139px;
-      }
-      .d-flex{
-        @include max-screen(576px) {
-          flex-direction: column;
-        }
-        .btn{
-          font-size: 16px;
-          line-height: 21px;
-          max-width: 148px;
-          width: 100%;
-          &:first-of-type{
-            margin-right: 13px;
-            padding: 8px 29px;
-            @include max-screen(576px) {
-              margin-right: 0;
-              margin-bottom: 15px;
-            }
-          }
-          &:last-of-type{
-            padding: 8px 25px;
+      .btn {
+        font-size: 16px;
+        line-height: 21px;
+        max-width: 148px;
+        width: 100%;
+        &:first-of-type{
+          margin-right: 13px;
+          padding: 8px 22px;
+          @include max-screen(576px) {
+            margin-right: 0;
+            margin-bottom: 15px;
           }
         }
-
+        &:last-of-type{
+          background: $back_btn;
+          padding: 8px 15px;
+        }
       }
     }
+  }
+  .item_2{
+    background-image: url("../images/CoD-WWII.jpg");
+    background-position: center top;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 109px;
+    padding-left: 680px;
+    @include max-screen(992px) {
+      padding-left: 30px;
+    }
+
+    h3 {
+      font-size: 36px;
+      line-height: 42px;
+      color: $white_col;
+      font-family: $main_font;
+    }
+    h4{
+      font-size: 24px;
+      line-height: 28px;
+      color: $white_col;
+      font-family: $main_font;
+      margin-bottom: 139px;
+    }
+    .d-flex{
+      @include max-screen(576px) {
+        flex-direction: column;
+      }
+      .btn{
+        font-size: 16px;
+        line-height: 21px;
+        max-width: 148px;
+        width: 100%;
+        &:first-of-type{
+          margin-right: 13px;
+          padding: 8px 29px;
+          @include max-screen(576px) {
+            margin-right: 0;
+            margin-bottom: 15px;
+          }
+        }
+        &:last-of-type{
+          padding: 8px 25px;
+        }
+      }
+
+    }
+  }
   .owl-dots{
     display: none;
+  }
+  .owl-nav{
+    .owl-prev{
+      position: absolute;
+      z-index: 4;
+      bottom: 50%;
+      @include max-screen(992px) {
+        bottom: 30%;
+      }
+      @include max-screen(576px) {
+        bottom: 15%;
+      }
+      left: 40px;
+      &:before{
+        content: "\f053";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        color: $green_col;
+        font-size: 14px;
+      }
+    }
+    .owl-next{
+      position: absolute;
+      z-index: 4;
+      bottom: 50%;
+      @include max-screen(992px) {
+        bottom: 30%;
+      }
+      @include max-screen(576px) {
+        bottom: 15%;
+      }
+      right: 40px;
+      &:before{
+        content: "\f054";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        color: $green_col;
+        font-size: 14px;
+      }
+    }
   }
 }
 
@@ -262,30 +311,115 @@ header {
 
 /*SECTION GAMES*/
 
-.games{
-  background-image: url("../images/Rectangle3.jpg");
+.games {
+  overflow: hidden;
+  background-image: url("../images/Rectangle3_1.jpg");
   background-size: cover;
   background-position: center top;
-  height: 100vh;
-  &:before{
-    content: '';
-    background: rgba(23, 23, 23, 0.5);;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  h2{
+  padding-top: 97px;
+  padding-bottom: 140px;
+
+  h2 {
     font-size: 36px;
     line-height: 42px;
     font-family: $main_font;
     color: $white_col;
-    z-index: 2;
+    margin-bottom: 54px;
+    text-align: center;
   }
 
+  .owl-carousel.slide-two {
+    margin-left: 66px;
+    max-width: 1334px;
+    width: 100%;
+    @include max-screen(768px) {
+      margin: auto;
+    }
 
 
+    .item {
+      background: $white_col;
+      border: 1px solid $green_col;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 320px;
+      max-height: 420px;
+      //transition: 0.7s;
+      position: relative;
+      @include max-screen(768px) {
+        margin: auto;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 180px;
+      }
+
+      .card_text {
+        padding: 22px 21px 27px;
+      }
+
+      h4 {
+        font-size: 18px;
+        line-height: 21px;
+        font-family: $main_font;
+        color: $text_col;
+        margin-bottom: 109px;
+      }
+
+      .title_1 {
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 21px;
+        line-height: 25px;
+        font-family: $main_font;
+        color: $text_col;
+        margin-bottom: 43px;
+      }
+
+      .btn {
+        padding: 19px 80px;
+        max-width: 278px;
+        width: 100%;
+      }
+    }
+
+    .owl-nav {
+      .owl-next {
+        position: absolute;
+        z-index: 5;
+        top: -95px;
+        right: 10%;
+        @include max-screen(576px) {
+          top: -55px;
+        }
+
+        &:before {
+          content: "\f054";
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+          color: $green_col;
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  .btn_carousel {
+    padding: 15px 43px;
+    background: $back_btn;
+    font-size: 21px;
+    line-height: 21px;
+    max-width: 207px;
+    width: 100%;
+    margin-top: 58px;
+
+  }
 }
+
 
 
 

@@ -1,13 +1,21 @@
 header {
   background-color: #373A3C; }
-  header .navbar-light .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 16px;
-    line-height: 16px;
-    font-family: "Helvetica Neue", sans-serif;
+  header .navbar-light .navbar-nav .nav-item {
     margin-right: 10px; }
-    header .navbar-light .navbar-nav .nav-item .nav-link:hover {
-      color: #FFFFFF; }
+    header .navbar-light .navbar-nav .nav-item .nav-link {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      line-height: 16px;
+      font-family: "Helvetica Neue", sans-serif; }
+      header .navbar-light .navbar-nav .nav-item .nav-link:hover {
+        color: #FFFFFF; }
+    header .navbar-light .navbar-nav .nav-item .dropdown-toggle::after {
+      content: "\f078";
+      color: #8DD83D;
+      border: none;
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      font-size: 10px; }
 
 .user_1 {
   position: relative;
@@ -22,6 +30,9 @@ header {
   position: absolute;
   top: 3px;
   left: -25px; }
+  @media screen and (max-width: 768px) {
+    .user:before {
+      left: -35px; } }
 
 .btn {
   display: inline-block;
@@ -36,7 +47,7 @@ header {
     color: #FFFFFF; }
 
 /*CAROUSEL_ONE*/
-.slide-one .item_1 {
+.owl-carousel.slide-one .item_1 {
   background-image: url("../images/Star-Wars-Battlefront-II-combat.jpg");
   background-position: center top;
   background-size: cover;
@@ -44,39 +55,39 @@ header {
   padding-top: 206px;
   padding-left: 680px; }
   @media screen and (max-width: 992px) {
-    .slide-one .item_1 {
+    .owl-carousel.slide-one .item_1 {
       padding-left: 30px;
       padding-top: 109px; } }
-  .slide-one .item_1 h3 {
+  .owl-carousel.slide-one .item_1 h3 {
     font-size: 36px;
     line-height: 42px;
     color: #FFFFFF;
     font-family: "Helvetica Neue", sans-serif; }
-  .slide-one .item_1 h4 {
+  .owl-carousel.slide-one .item_1 h4 {
     font-size: 24px;
     line-height: 28px;
     color: #FFFFFF;
     font-family: "Helvetica Neue", sans-serif;
     margin-bottom: 134px; }
   @media screen and (max-width: 576px) {
-    .slide-one .item_1 .d-flex {
+    .owl-carousel.slide-one .item_1 .d-flex {
       flex-direction: column; } }
-  .slide-one .item_1 .d-flex .btn {
+  .owl-carousel.slide-one .item_1 .d-flex .btn {
     font-size: 16px;
     line-height: 21px;
     max-width: 148px;
     width: 100%; }
-    .slide-one .item_1 .d-flex .btn:first-of-type {
+    .owl-carousel.slide-one .item_1 .d-flex .btn:first-of-type {
       margin-right: 13px;
       padding: 8px 22px; }
       @media screen and (max-width: 576px) {
-        .slide-one .item_1 .d-flex .btn:first-of-type {
+        .owl-carousel.slide-one .item_1 .d-flex .btn:first-of-type {
           margin-right: 0;
           margin-bottom: 15px; } }
-    .slide-one .item_1 .d-flex .btn:last-of-type {
+    .owl-carousel.slide-one .item_1 .d-flex .btn:last-of-type {
       background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
       padding: 8px 15px; }
-.slide-one .item_2 {
+.owl-carousel.slide-one .item_2 {
   background-image: url("../images/CoD-WWII.jpg");
   background-position: center top;
   background-size: cover;
@@ -84,38 +95,72 @@ header {
   padding-top: 109px;
   padding-left: 680px; }
   @media screen and (max-width: 992px) {
-    .slide-one .item_2 {
+    .owl-carousel.slide-one .item_2 {
       padding-left: 30px; } }
-  .slide-one .item_2 h3 {
+  .owl-carousel.slide-one .item_2 h3 {
     font-size: 36px;
     line-height: 42px;
     color: #FFFFFF;
     font-family: "Helvetica Neue", sans-serif; }
-  .slide-one .item_2 h4 {
+  .owl-carousel.slide-one .item_2 h4 {
     font-size: 24px;
     line-height: 28px;
     color: #FFFFFF;
     font-family: "Helvetica Neue", sans-serif;
     margin-bottom: 139px; }
   @media screen and (max-width: 576px) {
-    .slide-one .item_2 .d-flex {
+    .owl-carousel.slide-one .item_2 .d-flex {
       flex-direction: column; } }
-  .slide-one .item_2 .d-flex .btn {
+  .owl-carousel.slide-one .item_2 .d-flex .btn {
     font-size: 16px;
     line-height: 21px;
     max-width: 148px;
     width: 100%; }
-    .slide-one .item_2 .d-flex .btn:first-of-type {
+    .owl-carousel.slide-one .item_2 .d-flex .btn:first-of-type {
       margin-right: 13px;
       padding: 8px 29px; }
       @media screen and (max-width: 576px) {
-        .slide-one .item_2 .d-flex .btn:first-of-type {
+        .owl-carousel.slide-one .item_2 .d-flex .btn:first-of-type {
           margin-right: 0;
           margin-bottom: 15px; } }
-    .slide-one .item_2 .d-flex .btn:last-of-type {
+    .owl-carousel.slide-one .item_2 .d-flex .btn:last-of-type {
       padding: 8px 25px; }
-.slide-one .owl-dots {
+.owl-carousel.slide-one .owl-dots {
   display: none; }
+.owl-carousel.slide-one .owl-nav .owl-prev {
+  position: absolute;
+  z-index: 4;
+  bottom: 50%;
+  left: 40px; }
+  @media screen and (max-width: 992px) {
+    .owl-carousel.slide-one .owl-nav .owl-prev {
+      bottom: 30%; } }
+  @media screen and (max-width: 576px) {
+    .owl-carousel.slide-one .owl-nav .owl-prev {
+      bottom: 15%; } }
+  .owl-carousel.slide-one .owl-nav .owl-prev:before {
+    content: "\f053";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    color: #8DD83D;
+    font-size: 14px; }
+.owl-carousel.slide-one .owl-nav .owl-next {
+  position: absolute;
+  z-index: 4;
+  bottom: 50%;
+  right: 40px; }
+  @media screen and (max-width: 992px) {
+    .owl-carousel.slide-one .owl-nav .owl-next {
+      bottom: 30%; } }
+  @media screen and (max-width: 576px) {
+    .owl-carousel.slide-one .owl-nav .owl-next {
+      bottom: 15%; } }
+  .owl-carousel.slide-one .owl-nav .owl-next:before {
+    content: "\f054";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    color: #8DD83D;
+    font-size: 14px; }
 
 /*SECTION BEST_VALUE*/
 .best_value {
@@ -191,23 +236,83 @@ header {
 
 /*SECTION GAMES*/
 .games {
-  background-image: url("../images/Rectangle3.jpg");
+  overflow: hidden;
+  background-image: url("../images/Rectangle3_1.jpg");
   background-size: cover;
   background-position: center top;
-  height: 100vh; }
-  .games:before {
-    content: '';
-    background: rgba(23, 23, 23, 0.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1; }
+  padding-top: 97px;
+  padding-bottom: 140px; }
   .games h2 {
     font-size: 36px;
     line-height: 42px;
     font-family: "Helvetica Neue", sans-serif;
     color: #FFFFFF;
-    z-index: 2; }
+    margin-bottom: 54px;
+    text-align: center; }
+  .games .owl-carousel.slide-two {
+    margin-left: 66px;
+    max-width: 1334px;
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .games .owl-carousel.slide-two {
+        margin: auto; } }
+    .games .owl-carousel.slide-two .item {
+      background: #FFFFFF;
+      border: 1px solid #8DD83D;
+      box-sizing: border-box;
+      border-radius: 4px;
+      max-width: 320px;
+      max-height: 420px;
+      position: relative; }
+      @media screen and (max-width: 768px) {
+        .games .owl-carousel.slide-two .item {
+          margin: auto; } }
+      .games .owl-carousel.slide-two .item img {
+        display: block;
+        width: 100%;
+        height: 180px; }
+      .games .owl-carousel.slide-two .item .card_text {
+        padding: 22px 21px 27px; }
+      .games .owl-carousel.slide-two .item h4 {
+        font-size: 18px;
+        line-height: 21px;
+        font-family: "Helvetica Neue", sans-serif;
+        color: #435766;
+        margin-bottom: 109px; }
+      .games .owl-carousel.slide-two .item .title_1 {
+        margin-bottom: 16px; }
+      .games .owl-carousel.slide-two .item p {
+        font-size: 21px;
+        line-height: 25px;
+        font-family: "Helvetica Neue", sans-serif;
+        color: #435766;
+        margin-bottom: 43px; }
+      .games .owl-carousel.slide-two .item .btn {
+        padding: 19px 80px;
+        max-width: 278px;
+        width: 100%; }
+    .games .owl-carousel.slide-two .owl-nav .owl-next {
+      position: absolute;
+      z-index: 5;
+      top: -95px;
+      right: 10%; }
+      @media screen and (max-width: 576px) {
+        .games .owl-carousel.slide-two .owl-nav .owl-next {
+          top: -55px; } }
+      .games .owl-carousel.slide-two .owl-nav .owl-next:before {
+        content: "\f054";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        color: #8DD83D;
+        font-size: 21px; }
+  .games .btn_carousel {
+    padding: 15px 43px;
+    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+    font-size: 21px;
+    line-height: 21px;
+    max-width: 207px;
+    width: 100%;
+    margin-top: 58px; }
 
 /*SECTION DESIGN_LAB*/
 .design_lab {
