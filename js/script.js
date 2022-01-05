@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     $('.slide-two').owlCarousel({
         loop:true,
-        margin:10,
+        margin:15,
         nav:true,
         navText: [ '', ' ' ],
 
